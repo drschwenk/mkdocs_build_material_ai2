@@ -100,53 +100,9 @@ export default class Result {
 
     /* Initialize index, if this has not be done yet */
     if (ev.type === "focus" && !this.index_) {
-
-      /* Initialize index */
       const init = data => {
-
-        /* Preprocess and index sections and documents */
-        this.docs_ = data.reduce((docs, doc) => {
-          const [path, hash] = doc.location.split("#")
-
-          /* Associate section with parent document */
-          if (hash) {
-            doc.parent = docs.get(path)
-
-            /* Override page title with document title if first section */
-            if (doc.parent && !doc.parent.done) {
-              doc.parent.title = doc.title
-              doc.parent.text  = doc.text
-              doc.parent.done  = true
-            }
-          }
-
-          /* Some cleanup on the text */
-          doc.text = doc.text
-            .replace(/\n/g, " ")               /* Remove newlines */
-            .replace(/\s+/g, " ")              /* Compact whitespace */
-            .replace(/\s+([,.:;!?])/g,         /* Correct punctuation */
-              (_, char) => char)
-
-          /* Index sections and documents, but skip top-level headline */
-          if (!doc.parent || doc.parent.title !== doc.title)
-            docs.set(doc.location, doc)
-          return docs
-        }, new Map)
-
-        /* eslint-disable no-invalid-this, lines-around-comment */
-        const docs = this.docs_
-        this.index_ = lunr(function() {
-          this.field("title", { boost: 10 })
-          this.field("text")
-          this.ref("location")
-
-          /* Index documents */
-          docs.forEach(doc => this.add(doc))
-        })
-        /* eslint-enable no-invalid-this, lines-around-comment */
+        this.index_ = lunr.Index.load(data)
       }
-
-      /* Initialize index after short timeout to account for transition */
       setTimeout(() => {
         return typeof this.data_ === "function"
           ? this.data_().then(init)
@@ -169,7 +125,7 @@ export default class Result {
 
       /* Abort early, if search input is empty */
       this.value_ = target.value
-      if (this.value_.length === 0) {
+      if (this.value_.length === 0 || this.value_.length < 3) {
         this.meta_.textContent = this.message_.placeholder
         return
       }
