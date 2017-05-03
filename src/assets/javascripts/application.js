@@ -143,15 +143,9 @@ function initialize(config) { // eslint-disable-line func-style
   new Material.Event.Listener("[data-md-component=query]", [
     "focus", "keyup", "change"
   ], new Material.Search.Result("[data-md-component=result]", () => {
-    return fetch(`${config.url.base}/mkdocs/search_index.json`, {
+    return fetch(`${config.url.base}/mkdocs/combined_idx.json`, {
       credentials: "same-origin"
     }).then(response => response.json())
-      .then(data => {
-        return data.docs.map(doc => {
-          doc.location = config.url.base + doc.location
-          return doc
-        })
-      })
   })).listen()
 
   /* Listener: close drawer when anchor links are clicked */

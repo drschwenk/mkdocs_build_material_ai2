@@ -101,7 +101,9 @@ export default class Result {
     /* Initialize index, if this has not be done yet */
     if (ev.type === "focus" && !this.index_) {
       const init = data => {
-        this.index_ = lunr.Index.load(data)
+        this.index_ = lunr.Index.load(data.search_idx)
+        const docmap = new Map(Object.entries(data.doc_tree))
+        this.docs_ = docmap
       }
       setTimeout(() => {
         return typeof this.data_ === "function"
