@@ -223,11 +223,6 @@ function initialize(config) { // eslint-disable-line func-style
             "[data-md-component=search] [href][data-md-state=active]")
           if (focus instanceof HTMLLinkElement)
             window.location = focus.getAttribute("href")
-
-          /* Close search */
-          toggle.checked = false
-          toggle.dispatchEvent(new CustomEvent("change"))
-          query.blur()
         }
 
       /* Escape: close search */
