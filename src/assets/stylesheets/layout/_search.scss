@@ -35,6 +35,22 @@ $md-toggle__search--checked:
 // Search container
 .md-search {
 
+  .md-search__input {
+    padding-right: 0;
+  }
+
+  .md-search__form:hover {
+    border: 1px solid $ai2-light-gray;
+    color: $ai2-gray;
+    .md-search__icon {
+      color: $ai2-gray;
+    }
+  }
+
+  .md-search__input:hover::placeholder {
+    color: $ai2-gray;
+  }
+
   // Hide search, if JavaScript is not available.
   .no-js & {
     display: none;

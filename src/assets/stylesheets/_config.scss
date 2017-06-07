@@ -57,6 +57,26 @@ $break-devices: (
 // Variables: base colors
 // ----------------------------------------------------------------------------
 
+// AI2 theme colors
+
+$ai2-white: #fff;
+$ai2-black: #000;
+$ai2-gray: #b4b4b4;
+$ai2-blue-gray: #5e7e93;
+$ai2-off-black: #525252;
+$ai2-darker-blue: #1d303c;
+$ai2-dark-blue: #144664;
+$ai2-medium-blue: #2172a4;
+$ai2-rich-blue: #45a9cd;
+$ai2-light-blue: #b5deff;
+$ai2-orange: #e39a4c;
+$ai2-light-gray: #ddd;
+$ai2-lighter-gray: #f2f2f2;
+$ai2-off-white: #f2f6f8;
+$ai2-gold: #fcb431;
+$ai2-yellow: #fdea65;
+$ai2-teal: #45A9C6;
+
 // Primary and accent colors
 $md-color-primary:                    $clr-indigo-500 !default;
 $md-color-accent:                     $clr-indigo-a200 !default;

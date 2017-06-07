@@ -226,11 +226,20 @@ gulp.task("assets:images:build:svg", [
   load("assets/images/build/svg"))
 
 /*
+ * Copy and minify png graphics
+ */
+  gulp.task("assets:images:build:png", [
+    args.clean ? "assets:images:clean" : false
+  ].filter(t => t),
+    load("assets/images/build/png"))
+
+/*
  * Copy images
  */
 gulp.task("assets:images:build", [
   "assets:images:build:ico",
-  "assets:images:build:svg"
+  "assets:images:build:svg",
+  "assets:images:build:png"
 ])
 
 /*

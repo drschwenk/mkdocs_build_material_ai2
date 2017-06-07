@@ -99,9 +99,9 @@ button[data-md-color-accent] {
     }
 
     // Application header (stays always on top)
-    .md-header {
-      background-color: $color;
-    }
+    // .md-header {
+    //   background-color: $color;
+    // }
 
     // Current or hovered link
     .md-nav__link:active,
@@ -133,13 +133,13 @@ button[data-md-color-accent] {
     }
 
     // [tablet landscape +]: Add border to table of contents
-    @include break-from-device(tablet landscape) {
-
-      // Table of contents
-      .md-nav--secondary {
-        border-left: 0.4rem solid $color;
-      }
-    }
+    // @include break-from-device(tablet landscape) {
+    //
+    //   // Table of contents
+    //   .md-nav--secondary {
+    //     border-left: 0.4rem solid $color;
+    //   }
+    // }
 
     // [screen +]: Set background color for tabs
     @include break-from-device(screen) {

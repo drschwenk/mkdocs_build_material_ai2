@@ -39,6 +39,12 @@ $md-toggle__drawer--checked:
   padding: 2.4rem 0;
   overflow: hidden;
 
+  .md-sidebar__inner {
+    .md-nav {
+      border-left: .4rem solid $ai2-teal;
+    }
+  }
+
   // Hide for print
   @media print {
     display: none;
