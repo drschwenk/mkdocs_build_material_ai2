@@ -481,6 +481,8 @@ hr {
       display: block; }
     .no-js .md-header-nav__button.md-icon--search {
       display: none; }
+    .md-header-nav__button .md-flex .md-flex__cell a.md-logo {
+      padding: .2rem 0 .2rem 1.2rem; }
   .md-header-nav__title {
     padding: 0 2rem;
     font-size: 1.8rem;

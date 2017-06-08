@@ -111,6 +111,13 @@
       display: none;
     }
 
+    .md-flex {
+      .md-flex__cell {
+        a.md-logo {
+          padding: .2rem 0 .2rem 1.2rem;
+        }
+      }
+    }
     // [tablet landscape +]: Hide the search icon
     @include break-from-device(tablet landscape) {
 
