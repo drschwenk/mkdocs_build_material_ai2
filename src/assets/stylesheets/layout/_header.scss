@@ -47,6 +47,14 @@
     @include z-depth(2);
   }
 
+  .md-header-nav {
+    .md-flex__cell {
+      a {
+        padding: .2rem 0 .2rem 1.2rem;
+      }
+    }
+  }
+
   @include break-to-device(tablet landscape) {
     .md-header-nav__source {
       display: none;
@@ -111,13 +119,6 @@
       display: none;
     }
 
-    .md-flex {
-      .md-flex__cell {
-        a.md-logo {
-          padding: .2rem 0 .2rem 1.2rem;
-        }
-      }
-    }
     // [tablet landscape +]: Hide the search icon
     @include break-from-device(tablet landscape) {
 
