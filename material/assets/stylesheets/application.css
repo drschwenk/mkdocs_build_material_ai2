@@ -436,6 +436,7 @@ hr {
 .md-header {
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
   background-color: #fff;
+  border-top: 2px solid #fcb431;
   position: fixed;
   top: 0;
   right: 0;
@@ -1742,6 +1743,9 @@ hr {
     height: 100%;
     transition: width   0s, height  0s, opacity 0.25s;
     opacity: 1; }
+
+  .md-header .md-header-nav__source {
+    display: none; }
 
   .md-header-nav__button.md-icon--home, .md-header-nav__button.md-logo {
     display: none; }

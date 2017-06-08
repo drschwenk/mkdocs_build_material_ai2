@@ -28,6 +28,7 @@
 .md-header {
   @include z-depth(2);
   background-color: #fff;
+  border-top: 2px solid $ai2-gold;
   position: fixed;
   top: 0;
   right: 0;
@@ -44,6 +45,12 @@
   // Always show shadow, in case JavaScript is not available
   .no-js & {
     @include z-depth(2);
+  }
+
+  @include break-to-device(tablet landscape) {
+    .md-header-nav__source {
+      display: none;
+    }
   }
 
   // [screen +]: Show shadow depending on scroll offset
