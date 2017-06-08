@@ -533,18 +533,29 @@ hr {
     font-size: 1.5rem; }
 
 .md-footer-meta {
-  background: rgba(0, 0, 0, 0.895); }
+  background-color: #144664;
+  color: #fff;
+  font-size: 1.28rem; }
   .md-footer-meta__inner {
     margin-bottom: -0.1rem;
     padding: 0.4rem;
     overflow: auto; }
   html .md-footer-meta.md-typeset a {
-    color: rgba(255, 255, 255, 0.7); }
+    color: #fff; }
+    html .md-footer-meta.md-typeset a:hover,
+html .md-footer-meta.md-typeset a.\:hover {
+      color: #fff;
+      text-decoration: underline; }
+
+.md-footer-made-by-ai2 span {
+  float: left;
+  padding: 0.8rem 0; }
 
 .md-footer-copyright {
+  float: right;
   margin: 0 1.2rem;
   padding: 0.8rem 0;
-  color: rgba(255, 255, 255, 0.3);
+  color: #fff;
   font-size: 1.28rem; }
   .md-footer-copyright__highlight {
     color: rgba(255, 255, 255, 0.7); }
@@ -2171,7 +2182,7 @@ hr {
 
   .md-footer-copyright {
     max-width: 75%;
-    float: left; }
+    float: right; }
 
   .md-footer-social {
     padding: 1.2rem 0;

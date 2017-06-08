@@ -112,7 +112,9 @@
 
 // Non-navigational information
 .md-footer-meta {
-  background: opacify($md-color-black, 0.025);
+  background-color: $ai2-dark-blue;
+  color: $ai2-white;
+  font-size: 1.28rem;
 
   // Set spacing
   &__inner {
@@ -124,21 +126,31 @@
 
   // Use a decent color for non-hovered links and ensure specificity
   html &.md-typeset a {
-    color: $md-color-white--light;
+    color: $ai2-white;
+    &:hover {
+      color: $ai2-white;
+      text-decoration: underline;
+    }
   }
 }
-
+.md-footer-made-by-ai2 {
+  span {
+    float: left;
+    padding: 0.8rem 0;
+  }
+}
 // Copyright and theme information
 .md-footer-copyright {
+  float: right;
   margin: 0 1.2rem;
   padding: 0.8rem 0;
-  color: $md-color-white--lighter;
+  color: $ai2-white;
   font-size: ms(-1);
 
   // [tablet portrait +]: Show next to social media links
   @include break-from-device(tablet portrait) {
     max-width: 75%;
-    float: left;
+    float: right;
   }
 
   // Highlight copyright information
