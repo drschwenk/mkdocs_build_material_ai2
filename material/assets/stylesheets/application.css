@@ -131,6 +131,8 @@ kbd {
   font-size: 1.6rem;
   line-height: 1.6;
   -webkit-print-color-adjust: exact; }
+  .md-typeset h1, .md-typeset h2, .md-typeset h3, .md-typeset h4, .md-typeset h5, .md-typeset h6 {
+    font-weight: 600; }
   .md-typeset p,
   .md-typeset ul,
   .md-typeset ol,
@@ -138,21 +140,18 @@ kbd {
     margin: 1em 0; }
   .md-typeset h1 {
     margin: 0 0 4rem;
-    color: rgba(0, 0, 0, 0.54);
+    color: #45A9C6;
     font-size: 3.125rem;
-    font-weight: 300;
     letter-spacing: -0.01em;
     line-height: 1.3; }
   .md-typeset h2 {
     margin: 4rem 0 1.6rem;
     font-size: 2.5rem;
-    font-weight: 300;
     letter-spacing: -0.01em;
     line-height: 1.4; }
   .md-typeset h3 {
     margin: 3.2rem 0 1.6rem;
     font-size: 2rem;
-    font-weight: 400;
     letter-spacing: -0.01em;
     line-height: 1.5; }
   .md-typeset h2 + h3 {
@@ -160,14 +159,12 @@ kbd {
   .md-typeset h4 {
     margin: 1.6rem 0;
     font-size: 1.6rem;
-    font-weight: 700;
     letter-spacing: -0.01em; }
   .md-typeset h5,
   .md-typeset h6 {
     margin: 1.6rem 0;
     color: rgba(0, 0, 0, 0.54);
     font-size: 1.28rem;
-    font-weight: 700;
     letter-spacing: -0.01em; }
   .md-typeset h5 {
     text-transform: uppercase; }
@@ -356,8 +353,11 @@ hr {
 
 .made-by-ai2 {
   color: #b4b4b4;
+  border-bottom: 1px solid #ddd;
   font-size: 1.2rem;
-  font-weight: bold; }
+  font-weight: bold;
+  padding: 0 0 2rem;
+  margin: 0 0 3rem; }
   .made-by-ai2 img {
     display: block; }
 
