@@ -354,6 +354,13 @@ hr {
   padding: 0;
   border: 0; }
 
+.made-by-ai2 {
+  color: #b4b4b4;
+  font-size: 1.2rem;
+  font-weight: bold; }
+  .made-by-ai2 img {
+    display: block; }
+
 .md-svg {
   display: none; }
 
@@ -541,7 +548,8 @@ hr {
     padding: 0.4rem;
     overflow: auto; }
   html .md-footer-meta.md-typeset a {
-    color: #fff; }
+    color: #fff;
+    font-weight: bold; }
     html .md-footer-meta.md-typeset a:hover,
 html .md-footer-meta.md-typeset a.\:hover {
       color: #fff;

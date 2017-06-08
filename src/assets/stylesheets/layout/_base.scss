@@ -77,6 +77,15 @@ hr {
   border: 0;
 }
 
+.made-by-ai2 {
+  color: $ai2-gray;
+  font-size: 1.2rem;
+  font-weight: bold;
+  img {
+    display: block;
+  }
+}
+
 // Inline SVG container
 .md-svg {
   display: none;

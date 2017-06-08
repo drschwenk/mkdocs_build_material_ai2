@@ -127,6 +127,7 @@
   // Use a decent color for non-hovered links and ensure specificity
   html &.md-typeset a {
     color: $ai2-white;
+    font-weight: bold;
     &:hover {
       color: $ai2-white;
       text-decoration: underline;
