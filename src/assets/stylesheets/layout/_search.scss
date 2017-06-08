@@ -47,6 +47,10 @@ $md-toggle__search--checked:
     }
   }
 
+  .md-icon.md-search__icon:hover {
+    color: $ai2-white;
+  }
+
   .md-search__input:hover::placeholder {
     color: $ai2-gray;
   }

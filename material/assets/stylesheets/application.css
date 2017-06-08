@@ -638,6 +638,10 @@ hr {
 .md-search .md-search__form.\:hover .md-search__icon {
     color: #b4b4b4; }
 
+.md-search .md-icon.md-search__icon:hover,
+.md-search .md-icon.md-search__icon.\:hover {
+  color: #fff; }
+
 .md-search .md-search__input:hover::-webkit-input-placeholder,
 .md-search .md-search__input.\:hover::-webkit-input-placeholder {
   color: #b4b4b4; }
