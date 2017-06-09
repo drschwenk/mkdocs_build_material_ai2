@@ -1767,7 +1767,7 @@ html .md-footer-meta.md-typeset a.\:hover {
     transition: width   0s, height  0s, opacity 0.25s;
     opacity: 1; }
 
-  .md-header .md-header-nav__source {
+  .md-header .md-header-nav__source, .md-header #md-ai2-logo {
     display: none; }
 
   .md-header-nav__button.md-icon--home, .md-header-nav__button.md-logo {
