@@ -127,24 +127,26 @@
   // Use a decent color for non-hovered links and ensure specificity
   html &.md-typeset a {
     color: $ai2-white;
-    font-weight: bold;
+    font-weight: 600;
+
     &:hover {
       color: $ai2-white;
       text-decoration: underline;
     }
   }
 }
+
 .md-footer-made-by-ai2 {
   span {
-    float: left;
     padding: 0.8rem 0;
+    float: left;
   }
 }
 // Copyright and theme information
 .md-footer-copyright {
-  float: right;
   margin: 0 1.2rem;
   padding: 0.8rem 0;
+  float: right;
   color: $ai2-white;
   font-size: ms(-1);
 

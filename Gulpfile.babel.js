@@ -237,9 +237,9 @@ gulp.task("assets:images:build:svg", [
  * Copy images
  */
 gulp.task("assets:images:build", [
+  "assets:images:build:png",
   "assets:images:build:ico",
-  "assets:images:build:svg",
-  "assets:images:build:png"
+  "assets:images:build:svg"
 ])
 
 /*

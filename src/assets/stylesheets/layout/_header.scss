@@ -27,14 +27,15 @@
 // Application header (stays always on top)
 .md-header {
   @include z-depth(2);
-  background-color: #fff;
-  border-top: 2px solid $ai2-gold;
+
   position: fixed;
   top: 0;
   right: 0;
   left: 0;
   height: 5.6rem;
   transition: background-color 0.25s;
+  border-top: 2px solid $ai2-gold;
+  background-color: #FFFFFF;
   // background-color: $md-color-primary;
   // color: $md-color-white;
   color: $ai2-medium-blue;
@@ -50,13 +51,14 @@
   .md-header-nav {
     .md-flex__cell {
       a {
-        padding: .2rem 0 .2rem 1.2rem;
+        padding: 0.2rem 0 0.2rem 1.2rem;
       }
     }
   }
 
   @include break-to-device(tablet landscape) {
-    .md-header-nav__source, #md-ai2-logo {
+    .md-header-nav__source,
+    #md-ai2-logo {
       display: none;
     }
   }
@@ -79,16 +81,16 @@
 
 .md-flex__cell {
   .md-header-nav__source {
+    display: flex;
     align-items: center;
+    justify-content: center;
+    width: 20rem;
+    height: 3.85rem;
+    padding-right: 0;
     background-color: $ai2-orange;
     color: $ai2-white;
-    display: flex;
     font-size: 1.4rem;
-    height: 3.85rem;
-    justify-content: center;
-    padding-right: 0;
     text-align: center;
-    width: 20rem;
   }
 }
 
