@@ -1,15 +1,7 @@
 <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="drawer">
-    <a href="{{ config.site_url | default(nav.homepage.url, true) }}" title="{{ config.site_name }}" class="side-nav-link">
-      <img src="{{ base_url }}/assets/images/ai2-logo.120x91.png" width="60" height="45.5">
-    </a>
     {{ config.site_name }}
   </label>
-  {% if config.download_url %}
-    <a href="{{config.download_url}}" download class="md-nav__link md-mobile-nav__download">
-      DOWNLOAD
-    </a>
-  {% endif %}
   <ul class="md-nav__list" data-md-scrollfix>
     {% for nav_item in nav %}
       {% set path = "nav-" + loop.index | string %}

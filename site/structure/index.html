@@ -1,0 +1,504 @@
+
+<!DOCTYPE html>
+<html lang="" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="shortcut icon" href="../assets/images/favicon.ico">
+      
+      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.6.1">
+    
+    
+      
+        <title>Structure - Generic Data explorer</title>
+      
+    
+    
+      <script src="../assets/javascripts/modernizr-cded631146.js"></script>
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application-205c968b5e.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-d8ccd18677.palette.css">
+      
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oxygen:300,400,400i,700|Oxygen">
+        <style>body,input{font-family:"Oxygen","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Oxygen","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+  
+  
+  
+    <body data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink" id="md-ai2-logo">
+        <a href="http://allenai.org/" title="Allen Institute for Artificial Intelligence" class="md-logo" target="_blank">
+          <img src="../assets/images/ai2-just-bulb.png" height="40" width="53.2">
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <span class="md-flex__ellipsis md-header-nav__title">
+          
+            
+              
+            
+            Structure
+          
+        </span>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+          
+<div class="md-search" data-md-component="search">
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" required placeholder="Search this dataset" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">close</button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta" data-md-lang-result-none="No matching documents" data-md-lang-result-one="1 matching document" data-md-lang-result-other="# matching documents">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink" style="vertical-align:middle">
+        <div class="md-header-nav__source">
+          
+            <a href="github.com/<yourrepo>" download class="md-header-nav__download">
+              DOWNLOAD
+            </a>
+          
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    Generic Data explorer
+  </label>
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Structure
+      </label>
+    
+    <a href="./" title="Structure" class="md-nav__link md-nav__link--active">
+      Structure
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Home</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#section-title" title="Section title" class="md-nav__link">
+    Section title
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#structure" title="Structure" class="md-nav__link">
+    Structure
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../datapoint/" title="Datapoint" class="md-nav__link">
+      Datapoint
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Home</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#section-title" title="Section title" class="md-nav__link">
+    Section title
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#structure" title="Structure" class="md-nav__link">
+    Structure
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                
+                <h1 id="some-dataset">Some Dataset<a class="headerlink" href="#some-dataset" title="Permanent link">&para;</a></h1>
+<h2 id="section-title">Section title<a class="headerlink" href="#section-title" title="Permanent link">&para;</a></h2>
+<p>Description can go here. I've left the structure for tqa below as an example</p>
+<h2 id="structure">Structure<a class="headerlink" href="#structure" title="Permanent link">&para;</a></h2>
+<p>Here is the structure of the dataset json files for the train, test, and validation sets:</p>
+<div class="codehilite"><pre><span></span>[  ### at the top level is a list of &quot;lessons&quot; that are the atomic unit of the dataset
+    { ### within a lesson are several fields, including questions and their related instructional material
+            &quot;globalID&quot;: &quot;global id string&quot;,
+            &quot;lessonName&quot;: &quot;name of lesson&quot;,
+            &quot;questions&quot;: {
+            &quot;nonDiagramQuestions&quot;: {
+                &quot;question global ID&quot;: {
+                    &quot;answerChoices&quot;: {
+                        &quot;a&quot;: {
+                            &quot;idStructural&quot;: &quot;a.&quot;,
+                            &quot;processedText&quot;: &quot;cleaned answer option string&quot;,
+                            &quot;rawText&quot;: &quot;unprocessed answer option given in question&quot;
+                        },
+                        .
+                        .
+                        ... additional answer options                            
+                    },
+                    &quot;beingAsked&quot;: {
+                        &quot;processedText&quot;: &quot;cleaned question string&quot;,
+                        &quot;rawText&quot;: &quot;unprocessed question being asked&quot;
+                    },
+                    &quot;correctAnswer&quot;: {
+                        &quot;processedText&quot;: &quot;cleaned correct answer string&quot;,
+                        &quot;rawText&quot;: &quot;correct answer to question&quot;
+                    },
+                    &quot;globalID&quot;: &quot;global id number&quot;,
+                    &quot;idStructural&quot;: &quot;number identifier from source material&quot;,
+                    &quot;questionType&quot;: &quot;question type&quot;
+                    }
+                    .
+                    .
+                    .... additional questions
+            }
+            &quot;diagramQuestions&quot;: {
+                        The same fields as non-diagram questions, plus:
+                        &quot;imagePath&quot;: &quot;relative local path to image file&quot;
+                         &quot;imageName&quot;: &quot;image name&quot;
+            },
+            &quot;instructionalDiagrams&quot;: {
+                    &quot;global_id&quot;: {
+                         &quot;global id&quot;: &quot;global id number&quot;,
+                         &quot;imagePath&quot;: relative local path to image file&quot;,
+                        &quot;imageName&quot;: &quot;image name&quot;,
+                        &quot;rawText&quot;: &quot;description of diagram&quot;,
+                        &quot;processedText&quot;: &quot;processed description of diagram&quot;
+                    },
+                    ...
+            },
+            &quot;diagramAnnotations&quot;: {
+                &quot;diagram_name&quot;: [
+                {
+                    &quot;text&quot;: &quot;the ground truth content of the text box&quot;,
+                    &quot;rectangle&quot;: &quot;the location of the text &quot;
+                },
+                ...
+            },
+            &quot;topics&quot;: {
+                    &quot;Global Topic ID&quot;: {
+                        &quot;global ID&quot;: global id string,
+                     &quot;content&quot;: {
+                            &quot;figures&quot;: [
+                            {
+                                   &quot;caption&quot;: &quot;figure caption text&quot;,
+                                    &quot;imagePath}&quot;: &quot;relative local path to image file&quot;
+                             }
+                            ],
+                        &quot;text&quot;: &quot;Paragraph sized text explaining topic&quot;
+                                },
+                                &quot;orderID&quot;: &quot;order of appearance within lesson&quot;,
+                                &quot;mediaLinks&quot;: {[
+                            list of youtube/ other video links extracted from the text]
+                                        }
+                                  }
+                          }
+            &quot;adjunctTopics&quot;: {
+                    &quot;Vocabulary&quot;: {
+                        dictionary of lesson vocabulary words and their definitions.
+                    },
+                    &quot;section name&quot;: {
+                         &quot;content&quot;: {
+                            &quot;figures&quot;: [
+                            {
+                                   &quot;caption&quot;: &quot;figure caption text&quot;,
+                                    &quot;imagePath&quot;: &quot;relative local path to image file&quot;
+                             }
+                            ],
+                        &quot;text&quot;: &quot;Paragraph sized text explaining topic&quot;
+                                },
+                                &quot;orderID&quot;: &quot;order of appearance within lesson&quot;,
+                                &quot;mediaLinks&quot;: {[
+                            list of youtube/ other video links extracted from the text]
+                                        }
+                                  }
+                          }
+                    }
+
+            }
+          }                
+    .
+    .
+    ... repeated for additional lessons
+   ]
+</pre></div>
+
+
+<ul>
+<li>
+<p>Top-Level Lesson: This is the atomic unit of the dataset, and the level at which questions are paired to instructional    material, e.g "History of Life on Earth". The important components of a lesson are described below.</p>
+<ul>
+<li>
+<p>questions: questions that should be answerable given the contents of the lesson.</p>
+<ul>
+<li>nonDiagramQuestions: questions with no accompanying diagram needed to answer</li>
+<li>diagramQuestions: questions with an accompanying diagram needed to answer<ul>
+<li>questionType: format of the question, multiple choice, fill-in-the-blank, true/false, diagram multiple choice</li>
+<li>beingAsked: text of the question being posed</li>
+<li>idStructural: the original number or letter identifier in the source, e.g. "1.", "2.", "A."</li>
+<li>globalID: dataset-unique id number assigned to the question</li>
+<li>answerChoices: possible answer options- the number and form will depend on the question type</li>
+<li>correctAnswer: the correct answer given for the question</li>
+<li>imagePath: relative path to image file from the dataset root directory.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>topics:</p>
+<ul>
+<li>topic name: name string, e.g. Carboniferous Period, Cenozoic Era, Cretaceous Period</li>
+<li>content: instructional content extracted from source material<ul>
+<li>globalID: dataset-unique id number assigned to the topic</li>
+<li>text: paragraph sized text blurb introducing and explaining topic</li>
+<li>figures: diagram images associated with topic, if any</li>
+<li>caption: image caption</li>
+<li>imagePath: relative path to image file from the dataset root directory.</li>
+<li>orderID: order of appearance within lesson</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>adjunctTopics:</p>
+<ul>
+<li>section type: vocabulary, summary, introduction, apply concepts, etc.</li>
+<li>content: instructional content extracted from source material</li>
+<li>text: paragraph sized text blurb introducing and explaining topic</li>
+<li>figures: diagram images associated with topic, if any<ul>
+<li>caption: image caption</li>
+<li>imagePath: relative path to image file from the dataset root directory.</li>
+<li>orderID: order of appearance within lesson</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>diagramAnnotations</p>
+<ul>
+<li>diagram name: name of diagram image file (matching imageName field in
+    diagramQuestions and instructionalDiagrams)<ul>
+<li>A list of groundtruth diagram text boxes with<ul>
+<li>text: human transcribed text</li>
+<li>rectangle: location of text bounding box on the image in the form:
+[lower left coordinate, upper right coordinate]</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>instructionalDiagrams</p>
+<ul>
+<li>diagram name:<ul>
+<li>"imagePath": relative path to image file from the dataset root directory.</li>
+<li>"imageName": name of the diagram image file,</li>
+<li>"rawText": human written description of diagram,</li>
+<li>"processedText": normalized text of the description</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>metaLessonID: an identifier that links lessons that are similar in their concepts and subject matter. This is to prevent    similar material being placed in both test and train.</p>
+</li>
+</ul>
+</li>
+</ul>
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-made-by-ai2">
+        <span>
+          Built by
+          <a href="http://allenai.org">
+            AI2 &bull; http://allenai.org
+          </a>
+        </span>
+        <div class="md-footer-copyright">
+          powered by
+          <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+          and
+          <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
+            Material for MkDocs</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application-73e316244a.js"></script>
+      <script>app.initialize({url:{base:".."}})</script>
+      
+    
+    
+      
+      <script>!function(e,t,a,n,o,c,i){e.GoogleAnalyticsObject=o,e[o]=e[o]||function(){(e[o].q=e[o].q||[]).push(arguments)},e[o].l=1*new Date,c=t.createElement(a),i=t.getElementsByTagName(a)[0],c.async=1,c.src="https://www.google-analytics.com/analytics.js",i.parentNode.insertBefore(c,i)}(window,document,"script",0,"ga"),ga("create","UA-99826172-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");Array.prototype.map.call(links,function(e){e.host!=document.location.host&&e.addEventListener("click",function(){var t=e.getAttribute("data-md-action")||"follow";ga("send","event","outbound",t,e.href)})});var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})</script>
+      
+    
+  </body>
+</html>

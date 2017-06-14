@@ -21,7 +21,7 @@
       {% if config.site_favicon %}
         <link rel="shortcut icon" href="{{ base_url }}/{{ config.site_favicon }}">
       {% else %}
-        <link rel="shortcut icon" href="{{ base_url }}/assets/images/favicon.png">
+        <link rel="shortcut icon" href="{{ base_url }}/assets/images/favicon.ico">
       {% endif %}
       <meta name="generator" content="mkdocs-{{ mkdocs_version }}, mkdocs-material-1.6.1">
     {% endblock %}
@@ -35,12 +35,12 @@
       {% endif %}
     {% endblock %}
     {% block libs %}
-      <script src="{{ base_url }}/assets/javascripts/modernizr-56ade86843.js"></script>
+      <script src="{{ base_url }}/assets/javascripts/modernizr-cded631146.js"></script>
     {% endblock %}
     {% block styles %}
-      <link rel="stylesheet" href="{{ base_url }}/assets/stylesheets/application-4d0d3f2fbf.css">
+      <link rel="stylesheet" href="{{ base_url }}/assets/stylesheets/application-205c968b5e.css">
       {% if config.extra.palette %}
-        <link rel="stylesheet" href="{{ base_url }}/assets/stylesheets/application-f78e5cb881.palette.css">
+        <link rel="stylesheet" href="{{ base_url }}/assets/stylesheets/application-d8ccd18677.palette.css">
       {% endif %}
     {% endblock %}
     {% block fonts %}
@@ -118,6 +118,24 @@
                 {% if config.edit_uri %}
                   <a href="{{ page.edit_url }}" title="{{ lang.t('edit.link.title') }}" class="md-icon md-content__icon">edit</a>
                 {% endif %}
+                {% if page.is_homepage %}
+                <div class="made-by-ai2">
+                  Proudly built by:
+                  <div class="made-by-ai2__logo-and-link">
+                    <a href="http://allenai.org"><img src="{{ base_url }}/assets/images/ai2-full-logo.720x142.png" width="360" height="71"></a>
+                    <a href="http://allenai.org" class="made-by-ai2__sublink" style="margin-left:0">http://allenai.org</a> ⋅
+                    {% set path = "ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" %}
+                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/{{ path }}">
+                    <a href="https://twitter.com/allenai_org" class="made-by-ai2__sublink">
+                      <span class="made-by-ai2__twitter-link fa fa-twitter"></span>
+                      @allenai_org
+                    </a> ⋅
+                    <span class="made-by-ai2__sublink">
+                      View our other <a href="http://allenai.org/data.html">datasets.</a>
+                    </span>
+                  </div>
+                </div>
+              {% endif %}
                 {% if not "\x3ch1" in page.content %}
                   <h1>{{ page.title | default(config.site_name, true)}}</h1>
                 {% endif %}
@@ -149,7 +167,7 @@
       {% endblock %}
     </div>
     {% block scripts %}
-      <script src="{{ base_url }}/assets/javascripts/application-e89801380b.js"></script>
+      <script src="{{ base_url }}/assets/javascripts/application-73e316244a.js"></script>
       <script>app.initialize({url:{base:"{{ base_url }}"}})</script>
       {% for path in extra_javascript %}
         <script src="{{ path }}"></script>
@@ -157,7 +175,7 @@
     {% endblock %}
     {% block analytics %}
       {% if config.google_analytics %}
-      <script>!function(e,t,a,n,o,c,i){e.GoogleAnalyticsObject=o,e[o]=e[o]||function(){(e[o].q=e[o].q||[]).push(arguments)},e[o].l=1*new Date,c=t.createElement(a),i=t.getElementsByTagName(a)[0],c.async=1,c.src=n,i.parentNode.insertBefore(c,i)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","{{ config.google_analytics[0] }}","{{ config.google_analytics[1] }}"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");Array.prototype.map.call(links,function(e){e.host!=document.location.host&&e.addEventListener("click",function(){var t=e.getAttribute("data-md-action")||"follow";ga("send","event","outbound",t,e.href)})});var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})</script>
+      <script>!function(e,t,a,n,o,c,i){e.GoogleAnalyticsObject=o,e[o]=e[o]||function(){(e[o].q=e[o].q||[]).push(arguments)},e[o].l=1*new Date,c=t.createElement(a),i=t.getElementsByTagName(a)[0],c.async=1,c.src="https://www.google-analytics.com/analytics.js",i.parentNode.insertBefore(c,i)}(window,document,"script",0,"ga"),ga("create","{{ config.google_analytics[0] }}","{{ config.google_analytics[1] }}"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");Array.prototype.map.call(links,function(e){e.host!=document.location.host&&e.addEventListener("click",function(){var t=e.getAttribute("data-md-action")||"follow";ga("send","event","outbound",t,e.href)})});var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})</script>
       {% endif %}
     {% endblock %}
   </body>

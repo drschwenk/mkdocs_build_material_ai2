@@ -19,17 +19,20 @@
 # IN THE SOFTWARE.
 
 # Project information
-site_name: Material for MkDocs
-site_description: A Material Design theme for MkDocs
-site_author: Martin Donath
-site_url: http://squidfunk.github.io/mkdocs-material/
+site_name: Generic Data explorer
+# site_description: A Material Design theme for MkDocs
+# site_author: Martin Donath
+# site_url: http://squidfunk.github.io/mkdocs-material/
 
 # Repository
-repo_name: squidfunk/mkdocs-material
-repo_url: https://github.com/squidfunk/mkdocs-material
+repo_name: <yourreponame>
+repo_url: https://github.com/squidfunk/<yourrepo>
+
+# Download
+download_url: github.com/<yourrepo>
 
 # Copyright
-copyright: 'Copyright &copy; 2016 - 2017 Martin Donath'
+# copyright: 'Copyright &copy; 2016 - 2017 Martin Donath'
 
 # Theme directory
 theme_dir: material
@@ -38,6 +41,9 @@ theme_dir: material
 extra:
   feature:
     tabs: false
+  font:
+    text: Oxygen
+    code: Oxygen
   palette:
     primary: indigo
     accent: indigo
@@ -75,22 +81,11 @@ markdown_extensions:
 
 # Page tree
 pages:
-  - Material: index.md
-  - Getting started: getting-started.md
-  - Extensions:
-    - Admonition: extensions/admonition.md
-    - CodeHilite: extensions/codehilite.md
-    - Footnotes: extensions/footnotes.md
-    - Metadata: extensions/metadata.md
-    - Permalinks: extensions/permalinks.md
-    - PyMdown: extensions/pymdown.md
-  - Specimen: specimen.md
-  - Customization: customization.md
-  - Release notes: release-notes.md
-  - Contributing: contributing.md
-  - License: license.md
+  - Home: index.md
+  - Structure: structure.md
+  - Datapoint: datapoint.md
 
 # Google Analytics
 google_analytics:
-  - !!python/object/apply:os.getenv ["GOOGLE_ANALYTICS_KEY"]
+  - 'UA-99826172-1'
   - auto

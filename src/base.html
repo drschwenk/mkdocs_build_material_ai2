@@ -57,7 +57,7 @@
             href="{{ base_url }}/{{ config.site_favicon }}">
       {% else %}
         <link rel="shortcut icon"
-            href="{{ base_url }}/assets/images/favicon.png">
+            href="{{ base_url }}/assets/images/favicon.ico">
       {% endif %}
 
       <!-- Generator banner -->
@@ -227,6 +227,24 @@
                       title="{{ lang.t('edit.link.title') }}"
                       class="md-icon md-content__icon">edit</a>
                 {% endif %}
+                {% if page.is_homepage %}
+                <div class="made-by-ai2">
+                  Proudly built by:
+                  <div class="made-by-ai2__logo-and-link">
+                    <a href="http://allenai.org"><img src="{{ base_url }}/assets/images/ai2-full-logo.720x142.png" width="360" height="71"></a>
+                    <a href="http://allenai.org" class="made-by-ai2__sublink" style="margin-left:0;">http://allenai.org</a> ⋅
+                    {% set path = "ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" %}
+                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/{{ path }}">
+                    <a href="https://twitter.com/allenai_org" class="made-by-ai2__sublink">
+                      <span class="made-by-ai2__twitter-link fa fa-twitter"></span>
+                      @allenai_org
+                    </a> ⋅
+                    <span class="made-by-ai2__sublink">
+                      View our other <a href="http://allenai.org/data.html">datasets.</a>
+                    </span>
+                  </div>
+                </div>
+              {% endif %}
 
                 <!--
                   Hack: check whether the content contains a h1 headline. If it

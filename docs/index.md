@@ -1,30 +1,13 @@
-# Material <small>for MkDocs</small>
+# Dataset documentation skeleton
 
-## Beautiful project documentation
+![textbook_image](img/some_data.jpg)
 
-Material is a theme for [MkDocs][1], an excellent static site generator geared
-towards project documentation. It is built using Google's [Material Design][2]
-guidelines.
+Overview and description of the dataset.
 
-[![Material for MkDocs](images/material.png)](images/material.png)
 
-  [1]: http://www.mkdocs.org
-  [2]: https://www.google.com/design/spec/material-design
+## Subheading 
 
-## Quick start
+More detail about the design or purpose of the dataset
 
-Install the latest version of Material with `pip`:
-
-``` sh
-pip install mkdocs-material
-```
-
-Add the following line to your `mkdocs.yml`:
-
-``` yaml
-theme: 'material'
-```
-
-For detailed instructions see the [getting started guide][3].
-
-  [3]: getting-started.md
+## Anything else
+Can go here.

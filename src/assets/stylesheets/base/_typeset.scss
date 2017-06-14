@@ -64,6 +64,15 @@ kbd {
   // Colors should be kept when printing
   -webkit-print-color-adjust: exact;
 
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: 600;
+  }
+
   // Default spacing
   p,
   ul,
@@ -75,9 +84,9 @@ kbd {
   // 1st level headline
   h1 {
     margin: 0 0 4rem;
-    color: $md-color-black--light;
+    color: $ai2-teal;
     font-size: ms(3);
-    font-weight: 300;
+    // font-weight: 300;
     letter-spacing: -0.01em;
     line-height: 1.3;
   }
@@ -86,7 +95,7 @@ kbd {
   h2 {
     margin: 4rem 0 1.6rem;
     font-size: ms(2);
-    font-weight: 300;
+    // font-weight: 300;
     letter-spacing: -0.01em;
     line-height: 1.4;
   }
@@ -95,7 +104,7 @@ kbd {
   h3 {
     margin: 3.2rem 0 1.6rem;
     font-size: ms(1);
-    font-weight: 400;
+    // font-weight: 400;
     letter-spacing: -0.01em;
     line-height: 1.5;
   }
@@ -109,7 +118,7 @@ kbd {
   h4 {
     margin: 1.6rem 0;
     font-size: ms(0);
-    font-weight: 700;
+    // font-weight: 700;
     letter-spacing: -0.01em;
   }
 
@@ -119,7 +128,7 @@ kbd {
     margin: 1.6rem 0;
     color: $md-color-black--light;
     font-size: ms(-1);
-    font-weight: 700;
+    // font-weight: 700;
     letter-spacing: -0.01em;
   }
 
